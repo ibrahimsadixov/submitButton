@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Təsdiq oldu</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            background-color: rgb(95, 90, 90);
+            position: relative;
+            color: white;
+        }
+        a{
+            color: white;
+            opacity: 1;
+            transition: opacity 0.5s ease;
+        }
+        a:hover{
+            opacity: 0.5;
+        }
+    </style>
+    <script>
+        window.onload = function() {
+            const link = document.querySelector("a");
+            link.addEventListener("click", function(event) {
+                event.preventDefault();
+                document.body.style.opacity = "0";
+                setTimeout(function() {
+                    window.location.href = link.href;
+                }, 500);
+            });
+        };
+    </script>
+</head>
+<body>
+    daxil oldunuz :)
+
+    <a href="./index.htm">Geri Dön</a>
+</body>
+</html>
